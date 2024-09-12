@@ -40,3 +40,4 @@ const emailAddressRegex = /[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g;
 
 // command to display result on the console
 console.log(matchedResult(textData, htmlTagRegex));
+console.log(matchedResult(textData, emailAddressRegex));

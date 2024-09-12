@@ -1,4 +1,4 @@
-const data = `Email addresses:
+const textData = `Email addresses:
 user@example.com
 firstname.lastname@company.co.uk
 URLs:
@@ -25,6 +25,7 @@ Currency amounts:
 $19.99
 $1,234.56`;
 
+// arrow function to extract data from text
 const matchedResult = (text, regex) => {
   const matches = text.match(regex);
   if (matches) {
@@ -32,3 +33,9 @@ const matchedResult = (text, regex) => {
   }
   return null;
 }
+
+// all regexes for data type extraction
+const htmlTagRegex = /<[^>]+>/g;
+
+// command to display result on the console
+console.log(matchedResult(textData, htmlTagRegex));
